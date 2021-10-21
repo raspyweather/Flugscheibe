@@ -11,19 +11,21 @@ private:
 
 public:
     adxl345Sensor() {}
-    void Setup(){
+    void Setup()
+    {
         accel.begin();
-        accel.setDataRate()
+        accel.setDataRate(ADXL345_DATARATE_200_HZ);
+        accel.setRange(ADXL345_RANGE_16_G);
     }
-    void Loop(){
-        lastXAccel= accel.getX();
-        lastYAccel= accel.getY();
-        lastZAccel= accel.getZ();
+    void Loop()
+    {
+        lastXAccel = accel.getX();
+        lastYAccel = accel.getY();
+        lastZAccel = accel.getZ();
     }
 
     float getXAccel()
     {
-        
         return lastXAccel;
     }
     float getYAccel()
