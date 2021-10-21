@@ -1,3 +1,4 @@
+#pragma once
 #include <Adafruit_ADXL345_U.h>
 #include "accelerationSensor.h"
 
