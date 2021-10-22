@@ -1,12 +1,8 @@
 #pragma once
 #include "Adafruit_BMP3XX.h"
 #include "Sensor.h"
-#include "pressureSensor.h"
-#include "temperatureSensor.h"
 
-class bmp388Sensor : public Sensor,
-                     public PressureSensor,
-                     public TemperatureSensor
+class bmp388Sensor : public Sensor
 {
 private:
     Adafruit_BMP3XX bmp;
